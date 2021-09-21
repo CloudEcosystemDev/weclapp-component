@@ -1,4 +1,4 @@
-# <p align="center" width="100%"> <img src="./loweclapp.png" maxwidth="350"> </p>
+# <p align="center" width="100%"> <img src="./weclapp.png" maxwidth="350"> </p>
 
 # <p align="center" width="100%"> weclapp api OIH Connector </p>
 
