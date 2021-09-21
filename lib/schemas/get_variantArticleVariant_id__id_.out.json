@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "articleId": {
+            "type": "string",
+            "x-relatedEntityName": "article"
+        },
+        "articleNumber": {
+            "type": "string"
+        },
+        "attributeOptions": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "variantArticleId": {
+            "type": "string"
+        },
+        "variantArticleNumber": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "offerId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "salesOrderId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "offerItemToUpdateSupplierInformation": {
+                    "items": {
+                        "properties": {
+                            "offerItemId": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "quantity": {
+                                "format": "number",
+                                "type": "string"
+                            },
+                            "salesOrderItemId": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "updateInformation": {
+                                "type": "boolean"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "offerId",
+                "offerItemToUpdateSupplierInformation"
+            ],
+            "type": "object"
+        }
+    }
+}

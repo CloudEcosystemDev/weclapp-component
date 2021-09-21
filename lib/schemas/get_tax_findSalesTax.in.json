@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "dispatchCountryCode": {
+            "required": true,
+            "type": "string"
+        },
+        "recipientCountryCode": {
+            "required": false,
+            "type": "string"
+        },
+        "taxRateType": {
+            "required": false,
+            "type": "string"
+        },
+        "partyType": {
+            "required": false,
+            "type": "string"
+        },
+        "date": {
+            "required": false,
+            "type": "integer",
+            "format": "timestamp"
+        }
+    }
+}

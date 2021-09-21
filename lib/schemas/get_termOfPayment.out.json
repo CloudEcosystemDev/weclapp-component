@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "conditions": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "createdDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "discountPercentage": {
+                                    "format": "number",
+                                    "type": "string"
+                                },
+                                "lastModifiedDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "numberOfDays": {
+                                    "format": "int32",
+                                    "type": "integer"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

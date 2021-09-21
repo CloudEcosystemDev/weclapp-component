@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "active": {
+            "type": "boolean"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "defaultLevelId": {
+            "type": "string"
+        },
+        "defaultOutgoingGoodsLevelId": {
+            "type": "string"
+        },
+        "defaultProductionLevelId": {
+            "type": "string"
+        },
+        "defaultReturnsLevelId": {
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "warehouseType": {
+            "enum": [
+                "CONSIGNMENT",
+                "CONTAINER",
+                "DROP_SHIPPING",
+                "STANDARD"
+            ],
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "imageId": {
+                    "type": "string"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "parentCategoryId": {
+                    "type": "string",
+                    "x-relatedEntityName": "articleCategory"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        }
+    }
+}

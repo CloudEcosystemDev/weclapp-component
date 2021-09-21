@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "articleId": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "sourceWarehouseLevelId": {
+                    "type": "string"
+                },
+                "movementNote": {
+                    "type": "string"
+                },
+                "batchNumber": {
+                    "type": "string"
+                },
+                "serialNumbers": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "articleId",
+                "quantity",
+                "sourceWarehouseLevelId"
+            ],
+            "type": "object"
+        }
+    }
+}

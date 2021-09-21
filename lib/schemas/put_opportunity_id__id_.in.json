@@ -1,0 +1,205 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "contactId": {
+                    "type": "string",
+                    "x-relatedEntityName": "party"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "customAttributes": {
+                    "items": {
+                        "properties": {
+                            "attributeDefinitionId": {
+                                "type": "string"
+                            },
+                            "booleanValue": {
+                                "type": "boolean"
+                            },
+                            "dateValue": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "entityId": {
+                                "type": "string"
+                            },
+                            "entityReferences": {
+                                "items": {
+                                    "properties": {
+                                        "entityId": {
+                                            "type": "string"
+                                        },
+                                        "entityName": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "numberValue": {
+                                "format": "number",
+                                "type": "string"
+                            },
+                            "selectedValueId": {
+                                "type": "string"
+                            },
+                            "selectedValues": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "stringValue": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "customerId": {
+                    "type": "string",
+                    "x-relatedEntityName": "party"
+                },
+                "customerNumber": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "expectedDeliveryDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "expectedSignatureDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "hotLead": {
+                    "type": "boolean"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "nextCallDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "opportunityNumber": {
+                    "type": "string"
+                },
+                "responsibleUserId": {
+                    "type": "string"
+                },
+                "responsibleUserUsername": {
+                    "type": "string"
+                },
+                "revenue": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "salesChannel": {
+                    "type": "string"
+                },
+                "salesProbability": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "salesStageHistory": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "version": {
+                                "type": "string"
+                            },
+                            "createdDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "lastModifiedDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "salesStageId": {
+                                "type": "string"
+                            },
+                            "salesStageName": {
+                                "type": "string"
+                            },
+                            "userId": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "salesStageId": {
+                    "type": "string",
+                    "x-relatedEntityName": "salesStage"
+                },
+                "salesStageName": {
+                    "type": "string"
+                },
+                "startDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "topics": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "winLossDescription": {
+                    "type": "string"
+                },
+                "winLossReasonId": {
+                    "type": "string",
+                    "x-relatedEntityName": "opportunityWinLossReason"
+                },
+                "winLossReasonName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        }
+    }
+}

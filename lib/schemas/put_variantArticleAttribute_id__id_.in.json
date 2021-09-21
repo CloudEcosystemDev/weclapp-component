@@ -1,0 +1,62 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "attributeOptions": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "version": {
+                                "type": "string"
+                            },
+                            "createdDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "lastModifiedDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        }
+    }
+}

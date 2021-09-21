@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "campaignId": {
+                    "type": "string"
+                },
+                "campaignNumber": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "participation": {
+                    "type": "boolean"
+                },
+                "partyId": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

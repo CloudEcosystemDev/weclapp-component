@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "preview": {
+            "required": false,
+            "type": "boolean"
+        },
+        "scaleWidth": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "scaleHeight": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "bccAddresses": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "body": {
+                        "type": "string"
+                    },
+                    "ccAddresses": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "fromAddress": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "messageIdentifier": {
+                        "type": "string"
+                    },
+                    "receivedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "replyToAddress": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "subject": {
+                        "type": "string"
+                    },
+                    "toAddresses": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

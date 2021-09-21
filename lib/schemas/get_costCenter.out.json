@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "costCenterGroupId": {
+                        "type": "string",
+                        "x-relatedEntityName": "costCenterGroup"
+                    },
+                    "costCenterNumber": {
+                        "type": "string"
+                    },
+                    "costCenterType": {
+                        "enum": [
+                            "DIRECT_COST_CENTER",
+                            "INDIRECT_COST_CENTER",
+                            "SERVICE_COST_CENTER"
+                        ],
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "costCenterNumber",
+                    "costCenterType"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

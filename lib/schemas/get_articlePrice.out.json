@@ -1,0 +1,126 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "articleId": {
+                        "type": "string"
+                    },
+                    "articleNumber": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "currencyId": {
+                        "type": "string",
+                        "x-relatedEntityName": "currency"
+                    },
+                    "currencyName": {
+                        "type": "string"
+                    },
+                    "customerId": {
+                        "type": "string",
+                        "x-relatedEntityName": "party"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "distributionChannel": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "positionNumber": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "price": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "priceScaleType": {
+                        "enum": [
+                            "SCALE_FROM",
+                            "SCALE_TO"
+                        ],
+                        "type": "string"
+                    },
+                    "priceScaleValue": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "reductionAdditions": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "createdDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "lastModifiedDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "ADDITIONAL_ABS",
+                                        "ADDITION_PERCENT",
+                                        "REBATE_PERCENT",
+                                        "REDUCTION_ABS",
+                                        "REDUCTION_PERCENT"
+                                    ],
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "format": "number",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "type",
+                                "value"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "salesChannel": {
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "price",
+                    "priceScaleType",
+                    "priceScaleValue",
+                    "salesChannel"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

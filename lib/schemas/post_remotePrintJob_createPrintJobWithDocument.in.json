@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "weclappOsId": {
+            "required": true,
+            "type": "string"
+        },
+        "printerName": {
+            "required": true,
+            "type": "string"
+        },
+        "quantity": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "documentName": {
+            "required": true,
+            "type": "string"
+        },
+        "documentDescription": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

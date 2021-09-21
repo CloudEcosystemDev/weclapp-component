@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "countryCode": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "languageCode": {
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        }
+    }
+}

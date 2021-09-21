@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "primaryArticleId": {
+                    "type": "string",
+                    "x-relatedEntityName": "article"
+                },
+                "primaryArticleNumber": {
+                    "type": "string"
+                },
+                "variantArticleNumber": {
+                    "type": "string"
+                },
+                "variants": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "version": {
+                                "type": "string"
+                            },
+                            "articleId": {
+                                "type": "string",
+                                "x-relatedEntityName": "article"
+                            },
+                            "articleNumber": {
+                                "type": "string"
+                            },
+                            "attributeOptions": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "createdDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "lastModifiedDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "variantArticleNumber"
+            ],
+            "type": "object"
+        }
+    }
+}

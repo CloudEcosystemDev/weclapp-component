@@ -1,0 +1,794 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "addresses": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "company": {
+                        "type": "string"
+                    },
+                    "company2": {
+                        "type": "string"
+                    },
+                    "countryCode": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "deliveryAddress": {
+                        "type": "boolean"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "globalLocationNumber": {
+                        "type": "string"
+                    },
+                    "invoiceAddress": {
+                        "type": "boolean"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "type": "string"
+                    },
+                    "postOfficeBoxCity": {
+                        "type": "string"
+                    },
+                    "postOfficeBoxNumber": {
+                        "type": "string"
+                    },
+                    "postOfficeBoxZipCode": {
+                        "type": "string"
+                    },
+                    "primeAddress": {
+                        "type": "boolean"
+                    },
+                    "salutation": {
+                        "enum": [
+                            "COMPANY",
+                            "FAMILY",
+                            "MR",
+                            "MRS"
+                        ],
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "street1": {
+                        "type": "string"
+                    },
+                    "street2": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "titleId": {
+                        "type": "string",
+                        "x-relatedEntityName": "title"
+                    },
+                    "zipcode": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "bankAccounts": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "accountHolder": {
+                        "type": "string"
+                    },
+                    "accountNumber": {
+                        "type": "string"
+                    },
+                    "bankCode": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "creditInstitute": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "primary": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "accountNumber",
+                    "bankCode"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "birthDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "commercialLanguageId": {
+            "type": "string"
+        },
+        "commissionSalesPartners": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "commissionFix": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "commissionPercentage": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "commissionType": {
+                        "enum": [
+                            "FIX",
+                            "FIX_AND_MARGIN",
+                            "FIX_AND_REVENUE",
+                            "MARGIN",
+                            "NO_COMMISSION",
+                            "REVENUE"
+                        ],
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "salesPartnerCustomerId": {
+                        "type": "string",
+                        "x-relatedEntityName": "party"
+                    },
+                    "salesPartnerCustomerNumber": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "commissionType"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "company": {
+            "type": "string"
+        },
+        "company2": {
+            "type": "string"
+        },
+        "companySizeId": {
+            "type": "string"
+        },
+        "companySizeName": {
+            "type": "string"
+        },
+        "competitor": {
+            "type": "boolean"
+        },
+        "contacts": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "currencyId": {
+            "type": "string"
+        },
+        "currencyName": {
+            "type": "string"
+        },
+        "customAttributes": {
+            "items": {
+                "properties": {
+                    "attributeDefinitionId": {
+                        "type": "string"
+                    },
+                    "booleanValue": {
+                        "type": "boolean"
+                    },
+                    "dateValue": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "entityId": {
+                        "type": "string"
+                    },
+                    "entityReferences": {
+                        "items": {
+                            "properties": {
+                                "entityId": {
+                                    "type": "string"
+                                },
+                                "entityName": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "numberValue": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "selectedValueId": {
+                        "type": "string"
+                    },
+                    "selectedValues": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "stringValue": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "customer": {
+            "type": "boolean"
+        },
+        "customerAmountInsured": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerAnnualRevenue": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerBlockNotice": {
+            "type": "string"
+        },
+        "customerBlocked": {
+            "type": "boolean"
+        },
+        "customerBusinessType": {
+            "enum": [
+                "B2B",
+                "B2C",
+                "B2G"
+            ],
+            "type": "string"
+        },
+        "customerCategoryId": {
+            "type": "string"
+        },
+        "customerCategoryName": {
+            "type": "string"
+        },
+        "customerCreditLimit": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerCurrentSalesStageId": {
+            "type": "string"
+        },
+        "customerCurrentSalesStageName": {
+            "type": "string"
+        },
+        "customerDebtorAccountId": {
+            "type": "string"
+        },
+        "customerDebtorAccountNumber": {
+            "type": "string"
+        },
+        "customerDefaultHeaderDiscount": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerDefaultHeaderSurcharge": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerDeliveryBlock": {
+            "type": "boolean"
+        },
+        "customerInsolvent": {
+            "type": "boolean"
+        },
+        "customerInsured": {
+            "type": "boolean"
+        },
+        "customerLossDescription": {
+            "type": "string"
+        },
+        "customerLossReasonId": {
+            "type": "string"
+        },
+        "customerLossReasonName": {
+            "type": "string"
+        },
+        "customerNumber": {
+            "type": "string"
+        },
+        "customerNumberOld": {
+            "type": "string"
+        },
+        "customerPaymentMethodId": {
+            "type": "string"
+        },
+        "customerPaymentMethodName": {
+            "type": "string"
+        },
+        "customerSalesChannel": {
+            "type": "string"
+        },
+        "customerSalesPartner": {
+            "type": "boolean"
+        },
+        "customerSalesPartnerDefaultCommissionFix": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerSalesPartnerDefaultCommissionPercentage": {
+            "format": "number",
+            "type": "string"
+        },
+        "customerSalesPartnerDefaultCommissionType": {
+            "enum": [
+                "FIX",
+                "FIX_AND_MARGIN",
+                "FIX_AND_REVENUE",
+                "MARGIN",
+                "NO_COMMISSION",
+                "REVENUE"
+            ],
+            "type": "string"
+        },
+        "customerSalesProbability": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "customerSalesStageHistory": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "salesStageId": {
+                        "type": "string"
+                    },
+                    "salesStageName": {
+                        "type": "string"
+                    },
+                    "userId": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "customerSatisfaction": {
+            "enum": [
+                "NEUTRAL",
+                "SATISFIED",
+                "UNSATISFIED"
+            ],
+            "type": "string"
+        },
+        "customerShipmentMethodId": {
+            "type": "string"
+        },
+        "customerShipmentMethodName": {
+            "type": "string"
+        },
+        "customerSupplierNumber": {
+            "type": "string"
+        },
+        "customerTermOfPaymentId": {
+            "type": "string"
+        },
+        "customerTermOfPaymentName": {
+            "type": "string"
+        },
+        "customerUseCustomsTariffNumber": {
+            "type": "boolean"
+        },
+        "deliveryAddressId": {
+            "type": "string"
+        },
+        "deliveryEmailAddressesId": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "dunningAddressId": {
+            "type": "string"
+        },
+        "dunningEmailAddressesId": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "eoriNumber": {
+            "type": "string"
+        },
+        "fax": {
+            "type": "string"
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "fixPhone2": {
+            "type": "string"
+        },
+        "fixedResponsibleUser": {
+            "type": "boolean"
+        },
+        "imageId": {
+            "type": "string"
+        },
+        "invoiceAddressId": {
+            "type": "string"
+        },
+        "invoiceRecipientId": {
+            "type": "string",
+            "x-relatedEntityName": "party"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "leadRatingId": {
+            "type": "string"
+        },
+        "leadRatingName": {
+            "type": "string"
+        },
+        "leadSourceId": {
+            "type": "string"
+        },
+        "leadSourceName": {
+            "type": "string"
+        },
+        "leadStatus": {
+            "enum": [
+                "CONVERTED",
+                "DISQUALIFIED",
+                "NEW",
+                "PREQUALIFIED",
+                "QUALIFIED"
+            ],
+            "type": "string"
+        },
+        "legalFormId": {
+            "type": "string"
+        },
+        "legalFormName": {
+            "type": "string"
+        },
+        "middleName": {
+            "type": "string"
+        },
+        "mobilePhone1": {
+            "type": "string"
+        },
+        "mobilePhone2": {
+            "type": "string"
+        },
+        "onlineAccounts": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "accountName": {
+                        "type": "string"
+                    },
+                    "accountType": {
+                        "enum": [
+                            "BLOG",
+                            "FACEBOOK",
+                            "GOOGLE_PLUS",
+                            "INSTAGRAM",
+                            "LINKEDIN",
+                            "OTHER",
+                            "PINTEREST",
+                            "SKYPE",
+                            "SLIDESHARE",
+                            "TWITTER",
+                            "WIKIPEDIA",
+                            "XING",
+                            "YELP",
+                            "YOUTUBE"
+                        ],
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "url": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "optInEmail": {
+            "type": "boolean"
+        },
+        "optInLetter": {
+            "type": "boolean"
+        },
+        "optInPhone": {
+            "type": "boolean"
+        },
+        "optInSms": {
+            "type": "boolean"
+        },
+        "parentPartyId": {
+            "type": "string",
+            "x-relatedEntityName": "party"
+        },
+        "partyEmailAddresses": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "bccAddresses": {
+                        "type": "string"
+                    },
+                    "ccAddresses": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "toAddresses": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "partyType": {
+            "enum": [
+                "ORGANIZATION",
+                "PERSON"
+            ],
+            "type": "string"
+        },
+        "personCompany": {
+            "type": "string"
+        },
+        "personDepartment": {
+            "type": "string"
+        },
+        "personRole": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "phoneHome": {
+            "type": "string"
+        },
+        "primaryAddressId": {
+            "type": "string"
+        },
+        "primaryContactId": {
+            "type": "string"
+        },
+        "purchaseEmailAddressesId": {
+            "type": "string"
+        },
+        "quotationEmailAddressesId": {
+            "type": "string"
+        },
+        "ratingId": {
+            "type": "string"
+        },
+        "ratingName": {
+            "type": "string"
+        },
+        "referenceNumber": {
+            "type": "string"
+        },
+        "responsibleUserId": {
+            "type": "string"
+        },
+        "responsibleUserUsername": {
+            "type": "string"
+        },
+        "salesInvoiceEmailAddressesId": {
+            "type": "string"
+        },
+        "salesOrderEmailAddressesId": {
+            "type": "string"
+        },
+        "salutation": {
+            "enum": [
+                "COMPANY",
+                "FAMILY",
+                "MR",
+                "MRS"
+            ],
+            "type": "string"
+        },
+        "sectorId": {
+            "type": "string"
+        },
+        "sectorName": {
+            "type": "string"
+        },
+        "supplier": {
+            "type": "boolean"
+        },
+        "supplierCreditorAccountId": {
+            "type": "string"
+        },
+        "supplierCreditorAccountNumber": {
+            "type": "string"
+        },
+        "supplierCustomerNumberAtSupplier": {
+            "type": "string"
+        },
+        "supplierNumber": {
+            "type": "string"
+        },
+        "supplierNumberOld": {
+            "type": "string"
+        },
+        "supplierOrderBlock": {
+            "type": "boolean"
+        },
+        "supplierPaymentMethodId": {
+            "type": "string"
+        },
+        "supplierPaymentMethodName": {
+            "type": "string"
+        },
+        "supplierShipmentMethodId": {
+            "type": "string"
+        },
+        "supplierShipmentMethodName": {
+            "type": "string"
+        },
+        "supplierTermOfPaymentId": {
+            "type": "string"
+        },
+        "supplierTermOfPaymentName": {
+            "type": "string"
+        },
+        "tags": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "taxId": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "titleId": {
+            "type": "string",
+            "x-relatedEntityName": "title"
+        },
+        "topics": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "vatIdentificationNumber": {
+            "type": "string"
+        },
+        "website": {
+            "type": "string"
+        },
+        "xRechnungLeitwegId": {
+            "type": "string"
+        }
+    }
+}

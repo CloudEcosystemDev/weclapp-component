@@ -1,0 +1,93 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "accountNumber": {
+                    "type": "string"
+                },
+                "automatic": {
+                    "type": "boolean"
+                },
+                "balanceSheetItem": {
+                    "enum": [
+                        "ABSCHREIBUNGEN_GWG_ACCOUNTS",
+                        "ABSCHREIBUNGEN_UND_ANLAGEVERMOEGEN_ACCOUNTS",
+                        "BESONDERE_AUFWENDUNGEN_ACCOUNTS",
+                        "BUCHWERT_ANLAGENABGAENGE_ACCOUNTS",
+                        "FREMDLEISTUNGEN_ACCOUNTS",
+                        "GAS_STROM_ACCOUNTS",
+                        "GELEISTETE_ANZAHLUNGEN_ACCOUNTS",
+                        "GESETZLICHE_SOZIALE_AUFWENDUNGEN_ACCOUNTS",
+                        "HEIZUNG_ACCOUNTS",
+                        "INSTANDHALTUNG_ACCOUNTS",
+                        "INSTANDHALTUNG_UND_WERKZEUGE_ACCOUNTS",
+                        "KFZ_SONSTIGE_ACCOUNTS",
+                        "KFZ_STEUER_ACCOUNTS",
+                        "KFZ_VERSICHERUNG_ACCOUNTS",
+                        "KOSTEN_DER_WARENABGABE_ACCOUNTS",
+                        "LOEHENE_UND_GEHAELTER_ACCOUNTS",
+                        "MIETE_PACHT_ACCOUNTS",
+                        "NEUTRALE_AUFWENDUNGEN_ACCOUNTS",
+                        "NEUTRALE_ERTRAEGE_ACCOUNTS",
+                        "PRIVAT_ANTEILE_ACCOUNTS",
+                        "REVENUE_ACCOUNTS",
+                        "ROH_HILFS_UNDBETRIE_BSSTOFFE_ACCOUNTS",
+                        "SALDO_DER_STATISTISCHEN_KONTEN_ACCOUNTS",
+                        "SONSTIGE_ERLOESE_ACCOUNTS",
+                        "SONSTIGE_KONTEN_ACCOUNTS",
+                        "SONSTIGE_RAUMKOSTEN_ACCOUNTS",
+                        "STEUERN_VERSICHERUNGEN_BEITRAEGE_ACCOUNTS",
+                        "UMSATZSTEUER_ACCOUNTS",
+                        "UMSATZSTEUER_ZAHLUNGEN_ACCOUNTS",
+                        "VERSCHIEDENE_KOSTEN_ACCOUNTS",
+                        "VORSTEUER_ACCOUNTS",
+                        "WERBE_UND_REISEKOSTEN_ACCOUNTS"
+                    ],
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "parentAccountId": {
+                    "type": "string",
+                    "x-relatedEntityName": "ledgerAccount"
+                },
+                "parentAccountNumber": {
+                    "type": "string"
+                },
+                "taxId": {
+                    "type": "string"
+                },
+                "taxName": {
+                    "type": "string"
+                },
+                "type": {
+                    "enum": [
+                        "IMPERSONAL_ACCOUNT",
+                        "PERSONAL_ACCOUNT"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "type": "object"
+        }
+    }
+}

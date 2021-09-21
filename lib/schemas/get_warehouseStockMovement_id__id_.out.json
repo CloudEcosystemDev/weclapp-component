@@ -1,0 +1,93 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "articleId": {
+            "type": "string",
+            "x-relatedEntityName": "article"
+        },
+        "batchNumber": {
+            "type": "string"
+        },
+        "batchNumberId": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "incomingGoodsItemId": {
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "movementNote": {
+            "type": "string"
+        },
+        "movementNumber": {
+            "type": "string"
+        },
+        "postingDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "productionOrderId": {
+            "type": "string"
+        },
+        "quantity": {
+            "format": "number",
+            "type": "string"
+        },
+        "salesOrderItemId": {
+            "type": "string"
+        },
+        "serialNumber": {
+            "type": "string"
+        },
+        "serialNumberId": {
+            "type": "string"
+        },
+        "shipmentItemId": {
+            "type": "string"
+        },
+        "stockMovementType": {
+            "enum": [
+                "IN",
+                "IN_CUSTOMER_RETURN",
+                "IN_INVENTORY",
+                "IN_PRODUCTION_ORDER",
+                "IN_PURCHASE_ORDER",
+                "IN_SHIPMENT",
+                "IN_SHIPMENT_CANCELLATION",
+                "IN_SHIPMENT_CONSIGNMENT",
+                "IN_SHIPMENT_INTERNAL",
+                "IN_THIRD_PARTY_DEAL",
+                "OUT",
+                "OUT_INVENTORY",
+                "OUT_PRODUCTION_ORDER",
+                "OUT_SALES_ORDER",
+                "OUT_SHIPMENT",
+                "OUT_SHIPMENT_CANCELLATION",
+                "OUT_SHIPMENT_CONSIGNMENT",
+                "OUT_SHIPMENT_INTERNAL",
+                "OUT_THIRD_PARTY_DEAL",
+                "TRANSFER"
+            ],
+            "type": "string"
+        },
+        "valuationPrice": {
+            "format": "number",
+            "type": "string"
+        },
+        "warehouseLevelId": {
+            "type": "string"
+        }
+    }
+}

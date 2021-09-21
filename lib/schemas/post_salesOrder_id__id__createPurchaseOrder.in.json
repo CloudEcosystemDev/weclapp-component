@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "supplierId": {
+                    "type": "string"
+                },
+                "warehouseId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "supplierId"
+            ],
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "pageSize": {
+            "required": false,
+            "type": "integer"
+        },
+        "sort": {
+            "required": false,
+            "type": "string"
+        },
+        "entityId": {
+            "required": true,
+            "type": "string"
+        },
+        "entityName": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

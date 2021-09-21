@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "entityName": {
+            "required": true,
+            "type": "string"
+        },
+        "entityId": {
+            "required": true,
+            "type": "string"
+        },
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "description": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "authorName": {
+                    "type": "string"
+                },
+                "authorUserId": {
+                    "type": "string"
+                },
+                "authorUserUsername": {
+                    "type": "string"
+                },
+                "comment": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "entityId": {
+                    "type": "string"
+                },
+                "entityName": {
+                    "type": "string"
+                },
+                "htmlComment": {
+                    "type": "string"
+                },
+                "lastEditDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "parentCommentId": {
+                    "type": "string"
+                },
+                "privateComment": {
+                    "type": "boolean"
+                },
+                "publicComment": {
+                    "type": "boolean"
+                },
+                "recipientUsers": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "solution": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "comment"
+            ],
+            "type": "object"
+        }
+    }
+}

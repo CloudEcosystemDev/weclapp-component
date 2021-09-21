@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "barcode": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "deleted": {
+            "type": "boolean"
+        },
+        "forPicking": {
+            "type": "boolean"
+        },
+        "height": {
+            "format": "number",
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "length": {
+            "format": "number",
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "parentLevelId": {
+            "type": "string"
+        },
+        "stockable": {
+            "type": "boolean"
+        },
+        "warehouseId": {
+            "type": "string"
+        },
+        "weight": {
+            "format": "number",
+            "type": "string"
+        },
+        "width": {
+            "format": "number",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,255 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "articleNumber": {
+                    "type": "string"
+                },
+                "articlePrices": {
+                    "items": {
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "version": {
+                                "type": "string"
+                            },
+                            "createdDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "currencyId": {
+                                "type": "string",
+                                "x-relatedEntityName": "currency"
+                            },
+                            "currencyName": {
+                                "type": "string"
+                            },
+                            "customerId": {
+                                "type": "string",
+                                "x-relatedEntityName": "party"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "endDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "lastModifiedDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "positionNumber": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "price": {
+                                "format": "number",
+                                "type": "string"
+                            },
+                            "priceScaleType": {
+                                "enum": [
+                                    "SCALE_FROM",
+                                    "SCALE_TO"
+                                ],
+                                "type": "string"
+                            },
+                            "priceScaleValue": {
+                                "format": "number",
+                                "type": "string"
+                            },
+                            "reductionAdditions": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        },
+                                        "createdDate": {
+                                            "format": "timestamp",
+                                            "type": "integer"
+                                        },
+                                        "lastModifiedDate": {
+                                            "format": "timestamp",
+                                            "type": "integer"
+                                        },
+                                        "type": {
+                                            "enum": [
+                                                "ADDITIONAL_ABS",
+                                                "ADDITION_PERCENT",
+                                                "REBATE_PERCENT",
+                                                "REDUCTION_ABS",
+                                                "REDUCTION_PERCENT"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "format": "number",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "type",
+                                        "value"
+                                    ],
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "startDate": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "price",
+                            "priceScaleType",
+                            "priceScaleValue"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "customAttributes": {
+                    "items": {
+                        "properties": {
+                            "attributeDefinitionId": {
+                                "type": "string"
+                            },
+                            "booleanValue": {
+                                "type": "boolean"
+                            },
+                            "dateValue": {
+                                "format": "timestamp",
+                                "type": "integer"
+                            },
+                            "entityId": {
+                                "type": "string"
+                            },
+                            "entityReferences": {
+                                "items": {
+                                    "properties": {
+                                        "entityId": {
+                                            "type": "string"
+                                        },
+                                        "entityName": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "numberValue": {
+                                "format": "number",
+                                "type": "string"
+                            },
+                            "selectedValueId": {
+                                "type": "string"
+                            },
+                            "selectedValues": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            },
+                            "stringValue": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "ean": {
+                    "type": "string"
+                },
+                "fixedPurchaseQuantity": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "manufacturerPartNumber": {
+                    "type": "string"
+                },
+                "matchCode": {
+                    "type": "string"
+                },
+                "minimumPurchaseQuantity": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "procurementLeadDays": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "shortDescription1": {
+                    "type": "string"
+                },
+                "shortDescription2": {
+                    "type": "string"
+                },
+                "supplierId": {
+                    "type": "string",
+                    "x-relatedEntityName": "party"
+                },
+                "supplierNumber": {
+                    "type": "string"
+                },
+                "supplierStockQuantity": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "taxRateType": {
+                    "enum": [
+                        "REDUCED",
+                        "SLIGHTLY_REDUCED",
+                        "STANDARD",
+                        "SUPER_REDUCED",
+                        "ZERO"
+                    ],
+                    "type": "string"
+                },
+                "unitId": {
+                    "type": "string",
+                    "x-relatedEntityName": "unit"
+                },
+                "unitName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        }
+    }
+}

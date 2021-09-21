@@ -1,0 +1,75 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "accountId": {
+                    "type": "string",
+                    "x-relatedEntityName": "ledgerAccount"
+                },
+                "accountNumber": {
+                    "type": "string"
+                },
+                "contraAccountId": {
+                    "type": "string",
+                    "x-relatedEntityName": "ledgerAccount"
+                },
+                "contraAccountNumber": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "defaultDiscountAccountId": {
+                    "type": "string",
+                    "x-relatedEntityName": "ledgerAccount"
+                },
+                "defaultDiscountAccountNumber": {
+                    "type": "string"
+                },
+                "defaultNominalAccountId": {
+                    "type": "string",
+                    "x-relatedEntityName": "ledgerAccount"
+                },
+                "defaultNominalAccountNumber": {
+                    "type": "string"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "taxType": {
+                    "enum": [
+                        "IMPORT_SALES_TAX",
+                        "INPUT_VAT",
+                        "INPUT_VAT_REVERSED",
+                        "TAX_FREE",
+                        "VALUE_ADDED_TAX",
+                        "VAT_REVERSED"
+                    ],
+                    "type": "string"
+                },
+                "taxValue": {
+                    "format": "number",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "taxType",
+                "taxValue"
+            ],
+            "type": "object"
+        }
+    }
+}

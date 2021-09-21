@@ -1,0 +1,565 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "commercialLanguage": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "customAttributes": {
+                        "items": {
+                            "properties": {
+                                "attributeDefinitionId": {
+                                    "type": "string"
+                                },
+                                "booleanValue": {
+                                    "type": "boolean"
+                                },
+                                "dateValue": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "entityId": {
+                                    "type": "string"
+                                },
+                                "entityReferences": {
+                                    "items": {
+                                        "properties": {
+                                            "entityId": {
+                                                "type": "string"
+                                            },
+                                            "entityName": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "numberValue": {
+                                    "format": "number",
+                                    "type": "string"
+                                },
+                                "selectedValueId": {
+                                    "type": "string"
+                                },
+                                "selectedValues": {
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "stringValue": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "deliveryNoteNumber": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "incomingGoodsItems": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "articleId": {
+                                    "type": "string"
+                                },
+                                "articleNumber": {
+                                    "type": "string"
+                                },
+                                "createdDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "customAttributes": {
+                                    "items": {
+                                        "properties": {
+                                            "attributeDefinitionId": {
+                                                "type": "string"
+                                            },
+                                            "booleanValue": {
+                                                "type": "boolean"
+                                            },
+                                            "dateValue": {
+                                                "format": "timestamp",
+                                                "type": "integer"
+                                            },
+                                            "entityId": {
+                                                "type": "string"
+                                            },
+                                            "entityReferences": {
+                                                "items": {
+                                                    "properties": {
+                                                        "entityId": {
+                                                            "type": "string"
+                                                        },
+                                                        "entityName": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "numberValue": {
+                                                "format": "number",
+                                                "type": "string"
+                                            },
+                                            "selectedValueId": {
+                                                "type": "string"
+                                            },
+                                            "selectedValues": {
+                                                "items": {
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "stringValue": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "lastModifiedDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "note": {
+                                    "type": "string"
+                                },
+                                "parentItemId": {
+                                    "type": "string"
+                                },
+                                "positionNumber": {
+                                    "format": "int32",
+                                    "type": "integer"
+                                },
+                                "purchaseOrderItemId": {
+                                    "type": "string"
+                                },
+                                "quantity": {
+                                    "format": "number",
+                                    "type": "string"
+                                },
+                                "returnAssessmentId": {
+                                    "type": "string"
+                                },
+                                "returnAssessmentName": {
+                                    "type": "string"
+                                },
+                                "returnDescription": {
+                                    "type": "string"
+                                },
+                                "returnErrorId": {
+                                    "type": "string"
+                                },
+                                "returnErrorName": {
+                                    "type": "string"
+                                },
+                                "returnReasonId": {
+                                    "type": "string"
+                                },
+                                "returnReasonName": {
+                                    "type": "string"
+                                },
+                                "returnRectificationId": {
+                                    "type": "string"
+                                },
+                                "returnRectificationName": {
+                                    "type": "string"
+                                },
+                                "title": {
+                                    "type": "string"
+                                },
+                                "unitId": {
+                                    "type": "string"
+                                },
+                                "unitName": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "incomingGoodsNumber": {
+                        "type": "string"
+                    },
+                    "incomingGoodsType": {
+                        "enum": [
+                            "CUSTOMER_RETURN",
+                            "INTERNAL",
+                            "STANDARD",
+                            "SUPPLIER_COMPENSATION"
+                        ],
+                        "type": "string"
+                    },
+                    "invoiceAddress": {
+                        "properties": {
+                            "city": {
+                                "type": "string"
+                            },
+                            "company": {
+                                "type": "string"
+                            },
+                            "company2": {
+                                "type": "string"
+                            },
+                            "countryCode": {
+                                "type": "string"
+                            },
+                            "firstName": {
+                                "type": "string"
+                            },
+                            "globalLocationNumber": {
+                                "type": "string"
+                            },
+                            "lastName": {
+                                "type": "string"
+                            },
+                            "middleName": {
+                                "type": "string"
+                            },
+                            "phoneNumber": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxCity": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxZipCode": {
+                                "type": "string"
+                            },
+                            "salutation": {
+                                "enum": [
+                                    "COMPANY",
+                                    "FAMILY",
+                                    "MR",
+                                    "MRS"
+                                ],
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "street1": {
+                                "type": "string"
+                            },
+                            "street2": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "titleId": {
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "invoiceRecipientId": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "purchaseOrderId": {
+                        "type": "string"
+                    },
+                    "purchaseOrderNumber": {
+                        "type": "string"
+                    },
+                    "purchaseOrders": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "recipientAddress": {
+                        "properties": {
+                            "city": {
+                                "type": "string"
+                            },
+                            "company": {
+                                "type": "string"
+                            },
+                            "company2": {
+                                "type": "string"
+                            },
+                            "countryCode": {
+                                "type": "string"
+                            },
+                            "firstName": {
+                                "type": "string"
+                            },
+                            "globalLocationNumber": {
+                                "type": "string"
+                            },
+                            "lastName": {
+                                "type": "string"
+                            },
+                            "middleName": {
+                                "type": "string"
+                            },
+                            "phoneNumber": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxCity": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxZipCode": {
+                                "type": "string"
+                            },
+                            "salutation": {
+                                "enum": [
+                                    "COMPANY",
+                                    "FAMILY",
+                                    "MR",
+                                    "MRS"
+                                ],
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "street1": {
+                                "type": "string"
+                            },
+                            "street2": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "titleId": {
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "recordComment": {
+                        "type": "string"
+                    },
+                    "recordFreeText": {
+                        "type": "string"
+                    },
+                    "recordOpening": {
+                        "type": "string"
+                    },
+                    "relatedShipmentId": {
+                        "type": "string"
+                    },
+                    "returnAddress": {
+                        "properties": {
+                            "city": {
+                                "type": "string"
+                            },
+                            "company": {
+                                "type": "string"
+                            },
+                            "company2": {
+                                "type": "string"
+                            },
+                            "countryCode": {
+                                "type": "string"
+                            },
+                            "firstName": {
+                                "type": "string"
+                            },
+                            "globalLocationNumber": {
+                                "type": "string"
+                            },
+                            "lastName": {
+                                "type": "string"
+                            },
+                            "middleName": {
+                                "type": "string"
+                            },
+                            "phoneNumber": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxCity": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxZipCode": {
+                                "type": "string"
+                            },
+                            "salutation": {
+                                "enum": [
+                                    "COMPANY",
+                                    "FAMILY",
+                                    "MR",
+                                    "MRS"
+                                ],
+                                "type": "string"
+                            },
+                            "state": {
+                                "type": "string"
+                            },
+                            "street1": {
+                                "type": "string"
+                            },
+                            "street2": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "titleId": {
+                                "type": "string"
+                            },
+                            "zipcode": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "salesOrderId": {
+                        "type": "string"
+                    },
+                    "salesOrderNumber": {
+                        "type": "string"
+                    },
+                    "senderCustomerNumber": {
+                        "type": "string"
+                    },
+                    "senderPartyId": {
+                        "type": "string",
+                        "x-relatedEntityName": "party"
+                    },
+                    "senderSupplierNumber": {
+                        "type": "string"
+                    },
+                    "sentToRecipient": {
+                        "type": "boolean"
+                    },
+                    "sourceWarehouseId": {
+                        "type": "string"
+                    },
+                    "sourceWarehouseName": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "enum": [
+                            "CANCELLED",
+                            "DELIVERED",
+                            "DELIVERY_NOTE_PRINTED",
+                            "INCOMING_CANCELLED",
+                            "INCOMING_GOODS_MOVEMENT_PRINTED",
+                            "INCOMING_MOVED_INTO_STORE",
+                            "INCOMING_SHIPPED",
+                            "IN_ROUTE",
+                            "NEW",
+                            "SHIPPED"
+                        ],
+                        "type": "string"
+                    },
+                    "statusHistory": {
+                        "items": {
+                            "properties": {
+                                "status": {
+                                    "enum": [
+                                        "CANCELLED",
+                                        "DELIVERED",
+                                        "DELIVERY_NOTE_PRINTED",
+                                        "INCOMING_CANCELLED",
+                                        "INCOMING_GOODS_MOVEMENT_PRINTED",
+                                        "INCOMING_MOVED_INTO_STORE",
+                                        "INCOMING_SHIPPED",
+                                        "IN_ROUTE",
+                                        "NEW",
+                                        "SHIPPED"
+                                    ],
+                                    "type": "string"
+                                },
+                                "statusDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "userId": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "tags": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "warehouseId": {
+                        "type": "string"
+                    },
+                    "warehouseName": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "status"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

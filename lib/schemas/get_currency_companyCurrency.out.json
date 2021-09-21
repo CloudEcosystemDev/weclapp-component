@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "currencySymbol": {
+                    "type": "string"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

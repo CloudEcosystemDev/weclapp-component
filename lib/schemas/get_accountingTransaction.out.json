@@ -1,0 +1,159 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "accountingImportDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "conversionRate": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "conversionRateDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "currencyId": {
+                        "type": "string",
+                        "x-relatedEntityName": "currency"
+                    },
+                    "currencyName": {
+                        "type": "string"
+                    },
+                    "draft": {
+                        "type": "boolean"
+                    },
+                    "externalRecordNumber": {
+                        "type": "string"
+                    },
+                    "internalRecordNumber": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "reverseTransaction": {
+                        "type": "boolean"
+                    },
+                    "status": {
+                        "enum": [
+                            "DRAFT",
+                            "ESTABLISHED",
+                            "PREBATCHBOOKING"
+                        ],
+                        "type": "string"
+                    },
+                    "transactionDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "transactionDetails": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "version": {
+                                    "type": "string"
+                                },
+                                "accountId": {
+                                    "type": "string"
+                                },
+                                "accountNumber": {
+                                    "type": "string"
+                                },
+                                "amount": {
+                                    "format": "number",
+                                    "type": "string"
+                                },
+                                "createdDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "currencyId": {
+                                    "type": "string"
+                                },
+                                "currencyName": {
+                                    "type": "string"
+                                },
+                                "debitCredit": {
+                                    "enum": [
+                                        "CREDIT",
+                                        "DEBIT"
+                                    ],
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "lastModifiedDate": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "taxId": {
+                                    "type": "string"
+                                },
+                                "taxName": {
+                                    "type": "string"
+                                },
+                                "transactionDetailType": {
+                                    "enum": [
+                                        "DEFAULT",
+                                        "DISCOUNT",
+                                        "DUNNING_FEE",
+                                        "IMPORT_SALES_TAX",
+                                        "MONETARY_TRAFFIC",
+                                        "PAYMENT_TOLERANCE",
+                                        "REVERSE_CHARGE_TAX",
+                                        "REVERSE_CHARGE_TAX_CONTRA",
+                                        "TAX",
+                                        "TAXATION_ON_PAYMENT",
+                                        "TAXATION_ON_PAYMENT_CONTRA"
+                                    ],
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "transactionEstablishDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "transactionNumber": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "enum": [
+                            "IMPERSONAL",
+                            "INCOMING_CREDIT_NOTE",
+                            "INCOMING_INVOICE",
+                            "INCOMING_PAYMENT",
+                            "OUTGOING_CREDIT_NOTE",
+                            "OUTGOING_INVOICE",
+                            "OUTGOING_PAYMENT"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

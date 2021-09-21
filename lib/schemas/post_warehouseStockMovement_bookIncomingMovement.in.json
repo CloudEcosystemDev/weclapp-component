@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "articleId": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "articleValuationPrice": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "targetWarehouseLevelId": {
+                    "type": "string"
+                },
+                "movementNote": {
+                    "type": "string"
+                },
+                "batchNumber": {
+                    "type": "string"
+                },
+                "batchNumberExpirationDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "serialNumbers": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "articleId",
+                "quantity",
+                "targetWarehouseLevelId"
+            ],
+            "type": "object"
+        }
+    }
+}

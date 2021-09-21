@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "quantity": {
+                    "format": "number",
+                    "type": "string"
+                },
+                "productionOrderNumber": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "quantity",
+                "productionOrderNumber"
+            ],
+            "type": "object"
+        }
+    }
+}

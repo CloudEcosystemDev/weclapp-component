@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "currencyId": {
+            "type": "string"
+        },
+        "currencyName": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "openingBalance": {
+            "format": "number",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "result": {
+            "format": "int64",
+            "type": "integer"
+        }
+    }
+}
