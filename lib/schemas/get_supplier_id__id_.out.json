@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -723,5 +722,9 @@
         "website": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "partyType"
+    ],
+    "type": "object"
 }

@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -65,5 +64,9 @@
             },
             "type": "array"
         }
-    }
+    },
+    "required": [
+        "variantArticleNumber"
+    ],
+    "type": "object"
 }

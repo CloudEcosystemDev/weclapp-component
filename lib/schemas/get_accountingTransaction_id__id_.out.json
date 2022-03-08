@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -147,5 +146,6 @@
             ],
             "type": "string"
         }
-    }
+    },
+    "type": "object"
 }

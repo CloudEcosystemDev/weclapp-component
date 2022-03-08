@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -63,5 +62,9 @@
         "solution": {
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "comment"
+    ],
+    "type": "object"
 }

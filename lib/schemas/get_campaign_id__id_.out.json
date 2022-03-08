@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -109,5 +108,9 @@
         "responsibleUserUsername": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "campaignName"
+    ],
+    "type": "object"
 }

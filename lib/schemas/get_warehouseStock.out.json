@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "result": {
             "items": {
@@ -75,5 +74,6 @@
             },
             "type": "array"
         }
-    }
+    },
+    "type": "object"
 }

@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -790,5 +789,10 @@
         "xRechnungLeitwegId": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "customerBusinessType",
+        "partyType"
+    ],
+    "type": "object"
 }

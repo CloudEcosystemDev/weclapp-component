@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -22,5 +21,10 @@
             "format": "int32",
             "type": "integer"
         }
-    }
+    },
+    "required": [
+        "name",
+        "probability"
+    ],
+    "type": "object"
 }

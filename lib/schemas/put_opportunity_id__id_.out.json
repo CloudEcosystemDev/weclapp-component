@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -189,5 +188,9 @@
         "winLossReasonName": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
 }

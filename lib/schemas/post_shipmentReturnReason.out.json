@@ -1,4 +1,35 @@
 {
-    "type": "object",
-    "properties": {}
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "customerReturn": {
+            "type": "boolean"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "position": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "supplierReturn": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
 }

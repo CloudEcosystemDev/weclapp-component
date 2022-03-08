@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -594,5 +593,9 @@
         "withdrawalsComplete": {
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "status"
+    ],
+    "type": "object"
 }

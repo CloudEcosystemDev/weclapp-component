@@ -1,8 +1,8 @@
 {
-    "type": "object",
     "properties": {
         "result": {
             "type": "boolean"
         }
-    }
+    },
+    "type": "object"
 }

@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -243,5 +242,9 @@
         "unitName": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
 }

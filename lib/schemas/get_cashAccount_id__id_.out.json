@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -28,5 +27,6 @@
             "format": "number",
             "type": "string"
         }
-    }
+    },
+    "type": "object"
 }

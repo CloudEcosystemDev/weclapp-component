@@ -1,4 +1,28 @@
 {
-    "type": "object",
-    "properties": {}
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "description": {
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
 }

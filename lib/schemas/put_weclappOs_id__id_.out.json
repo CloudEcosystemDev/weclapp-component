@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -30,5 +29,9 @@
             },
             "type": "array"
         }
-    }
+    },
+    "required": [
+        "hardwareId"
+    ],
+    "type": "object"
 }

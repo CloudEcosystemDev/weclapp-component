@@ -1,4 +1,8 @@
 {
-    "type": "object",
-    "properties": {}
+    "properties": {
+        "result": {
+            "type": "object"
+        }
+    },
+    "type": "object"
 }

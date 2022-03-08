@@ -1,4 +1,878 @@
 {
-    "type": "object",
-    "properties": {}
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "activeVersion": {
+            "type": "boolean"
+        },
+        "commercialLanguage": {
+            "type": "string"
+        },
+        "commission": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "customAttributes": {
+            "items": {
+                "properties": {
+                    "attributeDefinitionId": {
+                        "type": "string"
+                    },
+                    "booleanValue": {
+                        "type": "boolean"
+                    },
+                    "dateValue": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "entityId": {
+                        "type": "string"
+                    },
+                    "entityReferences": {
+                        "items": {
+                            "properties": {
+                                "entityId": {
+                                    "type": "string"
+                                },
+                                "entityName": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "numberValue": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "selectedValueId": {
+                        "type": "string"
+                    },
+                    "selectedValues": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "stringValue": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "customerId": {
+            "type": "string",
+            "x-relatedEntityName": "party"
+        },
+        "customerNumber": {
+            "type": "string"
+        },
+        "deliveryAddress": {
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "company2": {
+                    "type": "string"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "globalLocationNumber": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "postOfficeBoxCity": {
+                    "type": "string"
+                },
+                "postOfficeBoxNumber": {
+                    "type": "string"
+                },
+                "postOfficeBoxZipCode": {
+                    "type": "string"
+                },
+                "salutation": {
+                    "enum": [
+                        "COMPANY",
+                        "FAMILY",
+                        "MR",
+                        "MRS"
+                    ],
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "street1": {
+                    "type": "string"
+                },
+                "street2": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "titleId": {
+                    "type": "string"
+                },
+                "zipcode": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "deliveryEmailAddresses": {
+            "properties": {
+                "bccAddresses": {
+                    "type": "string"
+                },
+                "ccAddresses": {
+                    "type": "string"
+                },
+                "toAddresses": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "description": {
+            "type": "string"
+        },
+        "dispatchCountryCode": {
+            "type": "string"
+        },
+        "grossAmount": {
+            "format": "number",
+            "type": "string"
+        },
+        "grossAmountInCompanyCurrency": {
+            "format": "number",
+            "type": "string"
+        },
+        "headerDiscount": {
+            "format": "number",
+            "type": "string"
+        },
+        "headerSurcharge": {
+            "format": "number",
+            "type": "string"
+        },
+        "invoiceAddress": {
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "company2": {
+                    "type": "string"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "globalLocationNumber": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "postOfficeBoxCity": {
+                    "type": "string"
+                },
+                "postOfficeBoxNumber": {
+                    "type": "string"
+                },
+                "postOfficeBoxZipCode": {
+                    "type": "string"
+                },
+                "salutation": {
+                    "enum": [
+                        "COMPANY",
+                        "FAMILY",
+                        "MR",
+                        "MRS"
+                    ],
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "street1": {
+                    "type": "string"
+                },
+                "street2": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "titleId": {
+                    "type": "string"
+                },
+                "zipcode": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "invoiceRecipientId": {
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "netAmount": {
+            "format": "number",
+            "type": "string"
+        },
+        "netAmountInCompanyCurrency": {
+            "format": "number",
+            "type": "string"
+        },
+        "nonStandardTaxId": {
+            "type": "string"
+        },
+        "nonStandardTaxName": {
+            "type": "string"
+        },
+        "opportunityId": {
+            "type": "string"
+        },
+        "opportunityNumber": {
+            "type": "string"
+        },
+        "paymentMethodId": {
+            "type": "string"
+        },
+        "paymentMethodName": {
+            "type": "string"
+        },
+        "plannedDeliveryDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "plannedShippingDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "pricingDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "quotationDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "quotationItems": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "addPageBreakBefore": {
+                        "type": "boolean"
+                    },
+                    "alternative": {
+                        "type": "boolean"
+                    },
+                    "articleId": {
+                        "type": "string"
+                    },
+                    "articleNumber": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "customAttributes": {
+                        "items": {
+                            "properties": {
+                                "attributeDefinitionId": {
+                                    "type": "string"
+                                },
+                                "booleanValue": {
+                                    "type": "boolean"
+                                },
+                                "dateValue": {
+                                    "format": "timestamp",
+                                    "type": "integer"
+                                },
+                                "entityId": {
+                                    "type": "string"
+                                },
+                                "entityReferences": {
+                                    "items": {
+                                        "properties": {
+                                            "entityId": {
+                                                "type": "string"
+                                            },
+                                            "entityName": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "numberValue": {
+                                    "format": "number",
+                                    "type": "string"
+                                },
+                                "selectedValueId": {
+                                    "type": "string"
+                                },
+                                "selectedValues": {
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "stringValue": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "discountPercentage": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "freeTextItem": {
+                        "type": "boolean"
+                    },
+                    "grossAmount": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "grossAmountInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "groupName": {
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "manualUnitCost": {
+                        "type": "boolean"
+                    },
+                    "manualUnitPrice": {
+                        "type": "boolean"
+                    },
+                    "netAmount": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "netAmountForStatistics": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "netAmountForStatisticsInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "netAmountInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "note": {
+                        "type": "string"
+                    },
+                    "optional": {
+                        "type": "boolean"
+                    },
+                    "parentItemId": {
+                        "type": "string"
+                    },
+                    "positionNumber": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "quantity": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "reductionAdditionItems": {
+                        "items": {
+                            "properties": {
+                                "position": {
+                                    "format": "int32",
+                                    "type": "integer"
+                                },
+                                "source": {
+                                    "enum": [
+                                        "ARTICLE",
+                                        "ARTICLE_AND_CUSTOMER",
+                                        "ARTICLE_CATEGORY",
+                                        "ARTICLE_CATEGORY_AND_CUSTOMER",
+                                        "MANUAL"
+                                    ],
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "ADDITION_ABSOLUTE",
+                                        "ADDITION_PERCENT",
+                                        "REBATE_PERCENT",
+                                        "REDUCTION_ABSOLUTE",
+                                        "REDUCTION_PERCENT"
+                                    ],
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "format": "number",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "servicePeriodFrom": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "servicePeriodTo": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "taxId": {
+                        "type": "string"
+                    },
+                    "taxName": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "unitCost": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "unitCostInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "unitId": {
+                        "type": "string"
+                    },
+                    "unitName": {
+                        "type": "string"
+                    },
+                    "unitPrice": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "unitPriceInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "quotationNumber": {
+            "type": "string"
+        },
+        "quotationType": {
+            "enum": [
+                "CONTRACT",
+                "NONE",
+                "PROJECT",
+                "SALES_INVOICE",
+                "SALES_ORDER"
+            ],
+            "type": "string"
+        },
+        "quotationVersion": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "recordAddress": {
+            "properties": {
+                "city": {
+                    "type": "string"
+                },
+                "company": {
+                    "type": "string"
+                },
+                "company2": {
+                    "type": "string"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "globalLocationNumber": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "middleName": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "postOfficeBoxCity": {
+                    "type": "string"
+                },
+                "postOfficeBoxNumber": {
+                    "type": "string"
+                },
+                "postOfficeBoxZipCode": {
+                    "type": "string"
+                },
+                "salutation": {
+                    "enum": [
+                        "COMPANY",
+                        "FAMILY",
+                        "MR",
+                        "MRS"
+                    ],
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "street1": {
+                    "type": "string"
+                },
+                "street2": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "titleId": {
+                    "type": "string"
+                },
+                "zipcode": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "recordComment": {
+            "type": "string"
+        },
+        "recordCurrencyId": {
+            "type": "string"
+        },
+        "recordCurrencyName": {
+            "type": "string"
+        },
+        "recordEmailAddresses": {
+            "properties": {
+                "bccAddresses": {
+                    "type": "string"
+                },
+                "ccAddresses": {
+                    "type": "string"
+                },
+                "toAddresses": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "recordFreeText": {
+            "type": "string"
+        },
+        "recordOpening": {
+            "type": "string"
+        },
+        "responsibleUserId": {
+            "type": "string"
+        },
+        "responsibleUserUsername": {
+            "type": "string"
+        },
+        "salesChannel": {
+            "type": "string"
+        },
+        "salesInvoiceEmailAddresses": {
+            "properties": {
+                "bccAddresses": {
+                    "type": "string"
+                },
+                "ccAddresses": {
+                    "type": "string"
+                },
+                "toAddresses": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "salesOrderEmailAddresses": {
+            "properties": {
+                "bccAddresses": {
+                    "type": "string"
+                },
+                "ccAddresses": {
+                    "type": "string"
+                },
+                "toAddresses": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "salesProbability": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "salesStageHistory": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "salesStageId": {
+                        "type": "string"
+                    },
+                    "salesStageName": {
+                        "type": "string"
+                    },
+                    "userId": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "salesStageId": {
+            "type": "string"
+        },
+        "salesStageName": {
+            "type": "string"
+        },
+        "sentToRecipient": {
+            "type": "boolean"
+        },
+        "servicePeriodFrom": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "servicePeriodTo": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "shipmentMethodId": {
+            "type": "string"
+        },
+        "shipmentMethodName": {
+            "type": "string"
+        },
+        "shippingCostItems": {
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "version": {
+                        "type": "string"
+                    },
+                    "articleId": {
+                        "type": "string"
+                    },
+                    "articleNumber": {
+                        "type": "string"
+                    },
+                    "createdDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "grossAmount": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "grossAmountInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "manualUnitCost": {
+                        "type": "boolean"
+                    },
+                    "manualUnitPrice": {
+                        "type": "boolean"
+                    },
+                    "netAmount": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "netAmountInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "taxId": {
+                        "type": "string"
+                    },
+                    "taxName": {
+                        "type": "string"
+                    },
+                    "unitCost": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "unitCostInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "unitPrice": {
+                        "format": "number",
+                        "type": "string"
+                    },
+                    "unitPriceInCompanyCurrency": {
+                        "format": "number",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "status": {
+            "enum": [
+                "ACCEPTED",
+                "CLOSED",
+                "INQUIRED",
+                "OPEN",
+                "REJECTED"
+            ],
+            "type": "string"
+        },
+        "statusHistory": {
+            "items": {
+                "properties": {
+                    "status": {
+                        "enum": [
+                            "ACCEPTED",
+                            "CLOSED",
+                            "INQUIRED",
+                            "OPEN",
+                            "REJECTED"
+                        ],
+                        "type": "string"
+                    },
+                    "statusDate": {
+                        "format": "timestamp",
+                        "type": "integer"
+                    },
+                    "userId": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "tags": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "termOfPaymentId": {
+            "type": "string"
+        },
+        "termOfPaymentName": {
+            "type": "string"
+        },
+        "validFrom": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "validTo": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "warehouseId": {
+            "type": "string"
+        },
+        "warehouseName": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "status"
+    ],
+    "type": "object"
 }

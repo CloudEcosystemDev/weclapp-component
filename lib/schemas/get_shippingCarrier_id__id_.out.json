@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -81,5 +80,9 @@
         "trackingUrl": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
 }

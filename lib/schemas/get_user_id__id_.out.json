@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -108,5 +107,10 @@
         "username": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "email",
+        "username"
+    ],
+    "type": "object"
 }
