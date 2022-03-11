@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -151,5 +150,10 @@
         "showOnCreationDialog": {
             "type": "boolean"
         }
-    }
+    },
+    "required": [
+        "attributeKey",
+        "attributeType"
+    ],
+    "type": "object"
 }

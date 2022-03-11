@@ -1,4 +1,61 @@
 {
-    "type": "object",
-    "properties": {}
+    "properties": {
+        "result": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "documentId": {
+                    "type": "string"
+                },
+                "lastModifiedDate": {
+                    "format": "timestamp",
+                    "type": "integer"
+                },
+                "printStatus": {
+                    "enum": [
+                        "DOCUMENT_NOT_FOUND",
+                        "ERROR",
+                        "NEW",
+                        "PRINTED",
+                        "SUBMITTED",
+                        "UNKNOWN_PRINTER"
+                    ],
+                    "type": "string"
+                },
+                "printerName": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "weclappOsHardwareId": {
+                    "type": "string"
+                },
+                "weclappOsId": {
+                    "type": "string",
+                    "x-relatedEntityName": "weclappOs"
+                }
+            },
+            "required": [
+                "documentId",
+                "printStatus",
+                "printerName",
+                "quantity"
+            ],
+            "type": "object"
+        }
+    },
+    "type": "object"
 }

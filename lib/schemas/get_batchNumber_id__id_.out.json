@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -84,5 +83,9 @@
             "format": "timestamp",
             "type": "integer"
         }
-    }
+    },
+    "required": [
+        "batchNumber"
+    ],
+    "type": "object"
 }

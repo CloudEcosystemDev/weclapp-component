@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -46,5 +45,12 @@
             "type": "string",
             "x-relatedEntityName": "weclappOs"
         }
-    }
+    },
+    "required": [
+        "documentId",
+        "printStatus",
+        "printerName",
+        "quantity"
+    ],
+    "type": "object"
 }

@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -261,5 +260,12 @@
         "warehouseName": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "status",
+        "targetEndDate",
+        "targetQuantity",
+        "targetStartDate"
+    ],
+    "type": "object"
 }

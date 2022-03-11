@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -39,5 +38,6 @@
         "variantArticleNumber": {
             "type": "string"
         }
-    }
+    },
+    "type": "object"
 }

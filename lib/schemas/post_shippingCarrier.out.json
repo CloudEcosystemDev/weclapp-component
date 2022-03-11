@@ -1,4 +1,88 @@
 {
-    "type": "object",
-    "properties": {}
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        },
+        "createdDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "internalShippingCarrier": {
+            "enum": [
+                "ANGEL_DE",
+                "AUSTRIAN_POST_EMS",
+                "AUSTRIAN_POST_PLUS_INTERNATIONAL",
+                "AUSTRIAN_POST_PREMIUM",
+                "AUSTRIAN_POST_PREMIUM_SELECT",
+                "AUSTRIAN_POST_RETURNS",
+                "AUSTRIAN_POST_STANDARD",
+                "CARGO_INTERNATIONAL_EXPRESS",
+                "CARGO_INTERNATIONAL_STANDARD",
+                "DACHSER",
+                "DEUTSCHE_POST_STANDARD",
+                "DEUTSCHE_POST_WARENPOST",
+                "DEUTSCHE_POST_WARENPOST_SIGNATURE",
+                "DEUTSCHE_POST_WARENPOST_UNTRACKED",
+                "DHL_EUROPAKET",
+                "DHL_EXPRESS_ONE_DAY",
+                "DHL_EXPRESS_ONE_DAY_EARLY",
+                "DHL_RETURNS",
+                "DHL_SAME_DAY",
+                "DHL_STANDARD",
+                "DHL_WARENPOST",
+                "DPD_EXPRESS_ONE_DAY",
+                "DPD_EXPRESS_ONE_DAY_EARLY",
+                "DPD_RETURNS",
+                "DPD_STANDARD",
+                "EKOL",
+                "FEDEX_EXPRESS_ONE_DAY_EARLY",
+                "FEDEX_STANDARD",
+                "GLS_EXPRESS_ONE_DAY",
+                "GLS_PICK_AND_SHIP",
+                "GLS_RETURNS",
+                "GLS_STANDARD",
+                "GO_ONE_DAY",
+                "HERMES_RETURNS",
+                "HERMES_STANDARD",
+                "ILOXX_STANDARD",
+                "LIEFERY_EXPRESS_ONE_DAY",
+                "MGH",
+                "PARCEL_ONE",
+                "SEVEN_SENDERS",
+                "SITTNAK",
+                "SWISS_POST",
+                "TNT_ONE_DAY",
+                "TNT_ONE_DAY_EARLY",
+                "UPS_EXPEDITED",
+                "UPS_EXPRESS_1200",
+                "UPS_EXPRESS_ONE_DAY",
+                "UPS_EXPRESS_ONE_DAY_EARLY",
+                "UPS_RETURNS",
+                "UPS_STANDARD",
+                "ZWECKFORM"
+            ],
+            "type": "string"
+        },
+        "lastModifiedDate": {
+            "format": "timestamp",
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "positionNumber": {
+            "format": "int32",
+            "type": "integer"
+        },
+        "trackingUrl": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name"
+    ],
+    "type": "object"
 }

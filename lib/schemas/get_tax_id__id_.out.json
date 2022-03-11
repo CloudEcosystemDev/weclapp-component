@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -61,5 +60,11 @@
             "format": "number",
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "name",
+        "taxType",
+        "taxValue"
+    ],
+    "type": "object"
 }

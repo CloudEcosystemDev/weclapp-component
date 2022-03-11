@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -67,5 +66,6 @@
         "warehouseLevelId": {
             "type": "string"
         }
-    }
+    },
+    "type": "object"
 }

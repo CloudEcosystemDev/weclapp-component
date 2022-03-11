@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -52,5 +51,10 @@
             },
             "type": "array"
         }
-    }
+    },
+    "required": [
+        "mediaType",
+        "name"
+    ],
+    "type": "object"
 }

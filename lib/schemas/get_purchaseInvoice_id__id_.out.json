@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -649,5 +648,10 @@
         "termOfPaymentName": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "paymentStatus",
+        "status"
+    ],
+    "type": "object"
 }

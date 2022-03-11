@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -27,5 +26,6 @@
         "partyId": {
             "type": "string"
         }
-    }
+    },
+    "type": "object"
 }

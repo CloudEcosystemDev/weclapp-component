@@ -1,5 +1,4 @@
 {
-    "type": "object",
     "properties": {
         "id": {
             "type": "string"
@@ -920,5 +919,9 @@
         "warehouseName": {
             "type": "string"
         }
-    }
+    },
+    "required": [
+        "status"
+    ],
+    "type": "object"
 }
